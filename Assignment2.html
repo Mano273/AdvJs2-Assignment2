@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closure Example</title>
+</head>
+<body>
+
+<p>Closure</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+function mult(a) {
+    var msg= "multiplication of ";
+    function inner(b){
+    	return msg+a+" and "+b+" is "+ a*b;
+    }
+    return inner(6);
+    
+} 
+function myFunction() {
+	var x= mult(4);
+    document.getElementById("demo").innerHTML = x;
+    alert(x);
+} 
+</script>
+
+</body>
+</html>
